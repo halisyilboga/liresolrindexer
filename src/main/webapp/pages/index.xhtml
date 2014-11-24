@@ -1,0 +1,97 @@
+<html xmlns="http://www.w3.org/1999/xhtml"  
+     xmlns:h="http://java.sun.com/jsf/html"      
+      xmlns:f="http://java.sun.com/jsf/core"
+     xmlns:p="http://primefaces.org/ui">  
+ <h:head><title>Demo Prueba Expert</title></h:head>  
+ <h:body>
+ 
+     <h:form>
+     <p:growl id="messages"></p:growl>      
+      <p:fieldset legend="Gestion de Tiempos Expert" style="margin-bottom:20px; width:70%; margin: 0 auto">
+	     <table align="center" style="width:70%"> 
+	     <tr>
+		        <h:inputHidden id="idActividad" value="#{actividadMB.idActividad}"></h:inputHidden>
+		     	<td><h:outputLabel for="proyecto" value="Proyecto : " /></td>
+		     	<td>
+		     	    <p:selectOneMenu id="proyecto" value="#{actividadMB.proyecto}">
+		     	    <f:selectItems value="#{actividadMB.proyectos}"/>
+		     	    </p:selectOneMenu>
+		     		<p:message id="proyectoMsg" for="proyecto" display="icon"/> 
+		     	</td>
+		     </tr>
+		     <tr>
+		     	<td><h:outputLabel for="tarea" value="Tarea : " /></td>
+		     	<td>
+		     	    <p:selectOneMenu id="tarea" value="#{actividadMB.tarea}" >
+		     	    <f:selectItems id="tareas" value="#{actividadMB.tareas}"/>
+		     	    </p:selectOneMenu>
+		     		<p:message id="tareaMsg" for="tarea" display="icon"/> 
+		     	</td>
+		     </tr>
+		     <tr>
+		     	<td><h:outputLabel for="fecha" value="Fecha : " /></td>   
+		     	<td>
+		     	<p:calendar id="fecha" value="#{actividadMB.fecha}"></p:calendar>
+		     		<p:message id="fechaMsg" for="fecha" display="icon"/> 
+		     	</td>    
+		     </tr>
+		      <tr>
+		     	<td><h:outputLabel for="horaInicio" value="Hora Inicio : " /></td>   
+		     	<td>
+		     	<p:calendar id="horaInicio" value="#{actividadMB.horaInicio}" pattern="HH:mm a" timeOnly="true" />
+		     		<p:message id="horaInicioMsg" for="horaInicio" display="icon"/> 
+		     	</td>    
+		     </tr>
+		      <tr>
+		     	<td><h:outputLabel for="horaFin" value="Hora Fin : " /></td>   
+		     	<td>
+		     	<p:calendar id="horaFin" value="#{actividadMB.horaFin}" pattern="HH:mm a" timeOnly="true" />
+		     		<p:message id="horaFinMsg" for="horaFin" display="icon"/> 
+		     	</td>    
+		     </tr>    
+		     <tr>
+		     	<td><h:outputLabel for="user" value="Usuario : " /></td>
+		     	<td>
+		     	    <p:selectOneMenu id="user" value="#{actividadMB.usuario}">
+		     	    <f:selectItems value="#{actividadMB.usuarios}"/>
+		     	    </p:selectOneMenu>
+		     		<p:message id="userMsg" for="user" display="icon"/> 
+		     	</td>
+		     </tr>        
+	         <tr>
+	         <p:panelGrid columns="4" style="margin: 0 auto">
+		     	<p:commandButton id="registrar" value="Guardar" action="#{actividadMB.guardar}" ajax="false"/>
+		     	<p:commandButton id="modificar" value="Actualizar" disabled="#{actividadMB.disabled}" action="#{actividadMB.actualizar}" ajax="false"/>
+		     	<p:commandButton id="consultar" value="Consultar" action="#{actividadMB.consultar}" ajax="false"/>
+		     	<p:commandButton id="reset" value="Reset" action="#{actividadMB.reset}" ajax="false"/>
+		     </p:panelGrid>
+		     </tr>   
+	     </table>
+     </p:fieldset>
+     <p:dataTable var="actividad" value="#{actividadMB.actividades}"  style="width:70%; margin: 0 auto">
+    <p:column headerText="Id">
+        <h:commandLink action="#{actividadMB.getDetalle}" value="#{actividad.id}">
+         <f:param name="id" value="#{actividad.id}" />
+       </h:commandLink>
+    </p:column>
+ 
+    <p:column headerText="Proyecto">
+        <h:outputText value="#{actividad.proyecto}" />
+    </p:column>
+ 
+    <p:column headerText="Tarea">
+        <h:outputText value="#{actividad.tarea}" />
+    </p:column>
+     <p:column headerText="Fecha">
+        <h:outputText value="#{actividad.fecha}" />
+    </p:column>
+     <p:column headerText="Hora Inicio">
+        <h:outputText value="#{actividad.horaInicio}" />
+    </p:column>
+     <p:column headerText="Hora Fin">
+        <h:outputText value="#{actividad.horaFin}" />
+    </p:column>
+</p:dataTable>     
+</h:form> 
+</h:body>
+</html> 

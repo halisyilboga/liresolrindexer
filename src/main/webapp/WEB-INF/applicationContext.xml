@@ -1,0 +1,84 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:tx="http://www.springframework.org/schema/tx"
+		xmlns:context="http://www.springframework.org/schema/context"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans
+				http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+				http://www.springframework.org/schema/tx 
+		        http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+		        http://www.springframework.org/schema/context 
+		        http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<!-- Beans Declaration -->
+	<bean id="User" class="com.expert.prueba.model.User"/>
+	<bean id="Proyecto" class="com.expert.prueba.model.Proyecto"/>
+	<bean id="Tarea" class="com.expert.prueba.model.Tarea"/>
+	<bean id="Actividad" class="com.expert.prueba.model.Actividad"/>
+	
+	<!-- User Service Declaration -->
+	<bean id="UserService" class="com.expert.prueba.service.UserService">
+		<property name="userDAO" ref="UserDAO" />
+	</bean>
+	<bean id="ProyectoService" class="com.expert.prueba.service.ProyectoService">
+		<property name="proyectoDao" ref="ProyectoDao" />
+	</bean>
+	<bean id="TareaService" class="com.expert.prueba.service.TareaService">
+		<property name="tareaDao" ref="TareaDao" />
+	</bean>
+	<bean id="ActividadService" class="com.expert.prueba.service.ActividadService">
+		<property name="actividadDao" ref="ActividadDao" />
+	</bean>
+	
+	<!-- User DAO Declaration -->
+	<bean id="UserDAO" class="com.expert.prueba.dao.UserDAO">
+		<property name="sessionFactory" ref="SessionFactory" />
+	</bean>
+	<bean id="ProyectoDao" class="com.expert.prueba.dao.ProyectoDao">
+		<property name="sessionFactory" ref="SessionFactory" />
+	</bean>
+	<bean id="TareaDao" class="com.expert.prueba.dao.TareaDao">
+		<property name="sessionFactory" ref="SessionFactory" />
+	</bean>
+	<bean id="ActividadDao" class="com.expert.prueba.dao.ActividadDao">
+		<property name="sessionFactory" ref="SessionFactory" />
+	</bean>
+	
+	<!-- Data Source Declaration -->
+	<bean id="DataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+		<property name="driverClass" value="com.mysql.jdbc.Driver" />	
+		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/Test" />	
+		<property name="user" value="root" />	
+		<property name="password" value="mysql" />	
+		<property name="maxPoolSize" value="10" />
+		<property name="maxStatements" value="0" />
+		<property name="minPoolSize" value="5" /> 
+	</bean>
+	
+	<!-- Session Factory Declaration -->
+	<bean id="SessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="DataSource" />
+		<property name="annotatedClasses">
+			<list>
+				<value>com.expert.prueba.model.User</value>
+				<value>com.expert.prueba.model.Proyecto</value>
+				<value>com.expert.prueba.model.Tarea</value>
+				<value>com.expert.prueba.model.Actividad</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<!-- Enable the configuration of transactional behavior based on annotations -->
+    <tx:annotation-driven transaction-manager="txManager"/>
+
+	<!-- Transaction Manager is defined -->
+    <bean id="txManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+       <property name="sessionFactory" ref="SessionFactory"/>
+    </bean>
+  
+</beans>
