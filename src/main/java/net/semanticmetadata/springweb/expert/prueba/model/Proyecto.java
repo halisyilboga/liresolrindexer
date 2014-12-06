@@ -1,4 +1,4 @@
-package com.expert.prueba.model;
+package net.semanticmetadata.springweb.expert.prueba.model;
 
 import java.util.Date;
 

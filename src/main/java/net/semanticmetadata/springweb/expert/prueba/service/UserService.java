@@ -1,11 +1,11 @@
-package com.expert.prueba.service;
+package net.semanticmetadata.springweb.expert.prueba.service;
 
 import java.util.List;
 
 import org.springframework.transaction.annotation.Transactional;
 
-import com.expert.prueba.dao.IUserDAO;
-import com.expert.prueba.model.User;
+import net.semanticmetadata.springweb.expert.prueba.dao.IUserDAO;
+import net.semanticmetadata.springweb.expert.prueba.model.User;
 
 /**
  * 

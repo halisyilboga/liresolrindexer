@@ -1,13 +1,13 @@
 /**
  * 
  */
-package com.expert.prueba.dao;
+package net.semanticmetadata.springweb.expert.prueba.dao;
 
 import java.util.List;
 
 import org.hibernate.SessionFactory;
 
-import com.expert.prueba.model.Proyecto;
+import net.semanticmetadata.springweb.expert.prueba.model.Proyecto;
 
 /**
  * @author EDGO

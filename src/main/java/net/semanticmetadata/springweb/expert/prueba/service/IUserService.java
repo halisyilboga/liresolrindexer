@@ -1,8 +1,8 @@
-package com.expert.prueba.service;
+package net.semanticmetadata.springweb.expert.prueba.service;
 
 import java.util.List;
 
-import com.expert.prueba.model.User;
+import net.semanticmetadata.springweb.expert.prueba.model.User;
 
 /**
  * 

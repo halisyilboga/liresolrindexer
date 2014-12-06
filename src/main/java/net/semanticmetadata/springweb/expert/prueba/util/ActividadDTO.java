@@ -1,9 +1,9 @@
-package com.expert.prueba.util;
+package net.semanticmetadata.springweb.expert.prueba.util;
 
 import java.io.Serializable;
 import java.util.Date;
 
-import com.expert.prueba.model.Actividad;
+import net.semanticmetadata.springweb.expert.prueba.model.Actividad;
 
 public class ActividadDTO implements Serializable{
 

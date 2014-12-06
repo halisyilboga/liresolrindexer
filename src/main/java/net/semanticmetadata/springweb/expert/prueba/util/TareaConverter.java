@@ -1,4 +1,4 @@
-package com.expert.prueba.util;
+package net.semanticmetadata.springweb.expert.prueba.util;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedProperty;
@@ -8,8 +8,8 @@ import javax.faces.convert.Converter;
 import javax.faces.convert.ConverterException;
 import javax.faces.convert.FacesConverter;
 
-import com.expert.prueba.model.Tarea;
-import com.expert.prueba.service.ITareaService;
+import net.semanticmetadata.springweb.expert.prueba.model.Tarea;
+import net.semanticmetadata.springweb.expert.prueba.service.ITareaService;
 
 @FacesConverter(value="tareaConverter", forClass=Tarea.class)
 public class TareaConverter implements Converter{

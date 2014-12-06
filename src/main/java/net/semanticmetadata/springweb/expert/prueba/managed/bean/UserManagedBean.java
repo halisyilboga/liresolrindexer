@@ -1,4 +1,4 @@
-package com.expert.prueba.managed.bean;
+package net.semanticmetadata.springweb.expert.prueba.managed.bean;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -12,8 +12,8 @@ import javax.faces.context.FacesContext;
 
 import org.springframework.dao.DataAccessException;
 
-import com.expert.prueba.model.User;
-import com.expert.prueba.service.IUserService;
+import net.semanticmetadata.springweb.expert.prueba.model.User;
+import net.semanticmetadata.springweb.expert.prueba.service.IUserService;
 
 /**
  * 

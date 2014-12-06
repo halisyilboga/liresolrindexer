@@ -1,0 +1,7 @@
+
+imageFile.getAbsolutePath(): /Users/halisyilboga/Desktop/works/SUN2012/Images/a/abbey/sun_aaalbzqrimafwbiv.jpg
+[-1, -1, 01:01:2010, default]
+imageFile.getAbsolutePath(): /Users/halisyilboga/Desktop/works/SUN2012/Images/a/abbey/sun_aaaulhwrhqgejnyt.jpg
+[-1, -1, 01:01:2010, default]
+imageFile.getAbsolutePath(): /Users/halisyilboga/Desktop/works/SUN2012/Images/a/abbey/sun_aacphuqehdodwawg.jpg
+[-1, -1, 01:01:2010, default]

@@ -1,4 +1,4 @@
-package com.expert.prueba.model;
+package net.semanticmetadata.springweb.expert.prueba.model;
 
 import java.util.Date;
 
@@ -13,7 +13,7 @@ import javax.persistence.Table;
  * 
  * User Entity
  * 
- * @author Edwin Gómez
+ * @author Edwin Gï¿½mez
  * @since 26/10/2014
  * @version 1.0.0
  *

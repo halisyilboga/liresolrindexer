@@ -1,10 +1,10 @@
-package com.expert.prueba.dao;
+package net.semanticmetadata.springweb.expert.prueba.dao;
 
 import java.util.List;
 
 import org.hibernate.SessionFactory;
 
-import com.expert.prueba.model.Tarea;
+import net.semanticmetadata.springweb.expert.prueba.model.Tarea;
 
 
 public class TareaDao implements ITareaDao{

@@ -65,3 +65,18 @@ java -jar indexer.jar visualwords
 ```
 
 *Erich Duda, 2013-12-02*
+
+~/project $ git init
+~/project $ git add .
+~/project $ git commit -m "first commit"
+~/project $ cd ~/Dropbox/git
+
+~/Dropbox/git $ git init --bare project.git
+~/Dropbox/git $ cd ~/project
+
+~/project $ git remote add origin ~/Dropbox/git/project.git
+~/project $ git push -u origin master
+
+
+
+

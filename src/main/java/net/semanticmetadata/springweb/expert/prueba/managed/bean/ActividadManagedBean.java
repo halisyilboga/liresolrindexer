@@ -1,4 +1,4 @@
-package com.expert.prueba.managed.bean;
+package net.semanticmetadata.springweb.expert.prueba.managed.bean;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -13,21 +13,21 @@ import javax.faces.model.SelectItem;
 
 import org.springframework.dao.DataAccessException;
 
-import com.expert.prueba.model.Actividad;
-import com.expert.prueba.model.Proyecto;
-import com.expert.prueba.model.Tarea;
-import com.expert.prueba.model.User;
-import com.expert.prueba.service.IActividadService;
-import com.expert.prueba.service.IProyectoService;
-import com.expert.prueba.service.ITareaService;
-import com.expert.prueba.service.IUserService;
-import com.expert.prueba.util.ActividadDTO;
+import net.semanticmetadata.springweb.expert.prueba.model.Actividad;
+import net.semanticmetadata.springweb.expert.prueba.model.Proyecto;
+import net.semanticmetadata.springweb.expert.prueba.model.Tarea;
+import net.semanticmetadata.springweb.expert.prueba.model.User;
+import net.semanticmetadata.springweb.expert.prueba.service.IActividadService;
+import net.semanticmetadata.springweb.expert.prueba.service.IProyectoService;
+import net.semanticmetadata.springweb.expert.prueba.service.ITareaService;
+import net.semanticmetadata.springweb.expert.prueba.service.IUserService;
+import net.semanticmetadata.springweb.expert.prueba.util.ActividadDTO;
 
 /**
  * 
  * Actividad Managed Bean
  * 
- * @author Edwin Gómez
+ * @author Edwin Gï¿½mez
  * @since 27/10/2012
  * @version 1.0.0
  *

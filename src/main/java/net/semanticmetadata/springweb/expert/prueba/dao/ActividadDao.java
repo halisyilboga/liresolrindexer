@@ -1,12 +1,14 @@
-package com.expert.prueba.dao;
+package net.semanticmetadata.springweb.expert.prueba.dao;
+
 
 import java.util.ArrayList;
 import java.util.List;
 
+import net.semanticmetadata.springweb.expert.prueba.model.Actividad;
+import net.semanticmetadata.springweb.expert.prueba.util.ActividadDTO;
+
 import org.hibernate.SessionFactory;
 
-import com.expert.prueba.model.Actividad;
-import com.expert.prueba.util.ActividadDTO;
 
 public class ActividadDao implements IActividadDao{
 

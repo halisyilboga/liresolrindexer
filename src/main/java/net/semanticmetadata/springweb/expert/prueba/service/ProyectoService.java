@@ -1,14 +1,14 @@
 /**
  * 
  */
-package com.expert.prueba.service;
+package net.semanticmetadata.springweb.expert.prueba.service;
 
 import java.util.List;
 
 import org.springframework.transaction.annotation.Transactional;
 
-import com.expert.prueba.dao.IProyectoDao;
-import com.expert.prueba.model.Proyecto;
+import net.semanticmetadata.springweb.expert.prueba.dao.IProyectoDao;
+import net.semanticmetadata.springweb.expert.prueba.model.Proyecto;
 
 /**
  * @author EDGO
